@@ -1,0 +1,208 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: antiquewhite  !important;
+  font-family: 'Poppins', sans-serif;
+}
+.navbar {
+    background: #1a1a2e;
+}
+
+.navbar-brand {
+    color: beige !important;
+}
+#logoutBtn {
+  background: transparent;
+  border: 1px solid #533AB7;
+  color: #EEEDFE;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+#logoutBtn:hover {
+  background: #533AB7;
+}
+#welcomeUser {
+  color: #aaa;
+  font-size: 13px;
+  margin-right: 10px;
+}
+.card {
+  border-radius: 12px;
+     border: 2px solid #1a1a2e;
+     overflow: visible;
+}
+.bgImg {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.bgImg:hover {
+    border: 5px solid #6345db;
+}
+#title{
+    border-radius: 5px;
+     border: 2px solid #1a1a2e;
+     padding: 4px 8px;
+}
+#description{
+border-radius: 5px;
+     border: 2px solid #1a1a2e;
+     padding: 4px 8px;
+}
+#fontSize{
+    border-radius: 5px;
+     border: 2px solid #1a1a2e;
+     padding: 4px 8px;
+}
+#fontSize{
+    border-radius: 5px;
+     border: 2px solid #1a1a2e;
+     padding: 4px 8px;
+     width: 80px;
+}
+#fontFamily{
+    border-radius: 5px;
+     border: 2px solid #1a1a2e;
+     padding: 4px 8px;
+     width: 120px;
+}
+#fontFamily option {
+  font-size: 14px;
+}
+
+#textColor{
+    border-radius: 5px;
+     border: 2px solid #1a1a2e;
+     padding: 2px 2px;
+     width: 80px;
+}
+.posts {
+    display: grid;
+    gap: 12px;
+}
+
+.post-card {
+    border-radius: 12px;
+    overflow: hidden;
+     border: 2px solid #1a1a2e;
+}
+
+.post-card-bg {
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-card-body {
+    padding: 12px 16px;
+}
+.post-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.post-card-desc {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+#postbtn {
+    background-color: #1a1a2e;
+    color: beige;
+    border: 3px solid #1a1a2e;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#postbtn:hover {
+  background: #4c2ad6;
+}
+ .btn-edit {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 2px solid #185FA5;
+  background: transparent;
+  color: #185FA5;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-edit:hover { background: #9db9d3; }
+
+.btn-delete {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 0.5px solid #e75a5a;
+  background: transparent;
+  color: #A32D2D;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-delete:hover { background: #bd8c8c; } 
+.login-card {
+  background: white;
+  border-radius: 16px;
+  border: 2px solid #e0e0e0;
+  padding: 32px 28px;
+  width: 340px;
+  margin: 80px auto;
+}
+.login-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+.login-card p.sub {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+}
+.login-card input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 12px;
+  outline: none;
+}
+.login-card input:focus {
+  border-color: #533AB7;
+}
+.login-card .login-btn {
+  width: 100%;
+  padding: 11px;
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+.login-card .login-btn:hover {
+  background: #533AB7;
+}
+.login-card .footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+.login-card .footer-text span {
+  color: #533AB7;
+  font-weight: 600;
+  cursor: pointer;
+}

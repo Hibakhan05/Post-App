@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post app</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="authSection">
+
+        <div id="loginForm" class="login-card">
+            <h2>Welcome Back</h2>
+            <p class="sub">Sign in to your account</p>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button class="login-btn" onclick="login()">Login</button>
+            <hr>
+            <p class="footer-text">Don't have an account?
+                <span onclick="showSignup()">Sign Up</span>
+            </p>
+        </div>
+
+        <div id="signupForm" class="login-card" style="display:none">
+            <h2>Create Account</h2>
+            <p class="sub">Join us today</p>
+            <input type="text" id="signupUsername" placeholder="Username">
+            <input type="password" id="signupPassword" placeholder="Password">
+            <button class="login-btn" onclick="signup()">Sign Up</button>
+            <hr>
+            <p class="footer-text">Already have an account?
+                <span onclick="showLogin()">Login</span>
+            </p>
+        </div>
+
+    </div>
+
+
+    <div id="mainApp" style="display:none">
+
+        <nav class="navbar">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">✦ PostApp</span>
+                <div>
+                    <span id="welcomeUser"></span>
+                    <button class="btn btn-sm" id="logoutBtn" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card p-3 m-2">
+
+                        <div class="mb-3">
+                            <label class="form-label">Title</label>
+                            <input type="text" class="form-control" id="title">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-control" id="description" rows="3"></textarea>
+                        </div>
+
+                        <div class="mb-3 d-flex images justify-content-around">
+                            <img class="bgImg" onclick="selectImg('Images/img1.gif')" src="Images/img1.gif" alt="Image 1">
+                            <img class="bgImg" onclick="selectImg('Images/img2.jpg')" src="Images/img2.jpg" alt="Image 2">
+                            <img class="bgImg" onclick="selectImg('Images/img3.gif')" src="Images/img3.gif" alt="Image 3">
+                            <img class="bgImg" onclick="selectImg('Images/img4.jpg')" src="Images/img4.jpg" alt="Image 4">
+                            <img class="bgImg" onclick="selectImg('Images/img5.jpg')" src="Images/img5.jpg" alt="Image 5">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Text Color</label>
+                            <input type="color" id="textColor" value="#000000" class="form-control form-control-color">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Font</label>
+                            <select id="fontFamily" class="form-select">
+                                <option value="Arial">Arial</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Courier New">CourierN</option>
+                                <option value="Helvetica">Helvetica</option>
+                                <option value="Times New Roman">TNR</option>
+                                <option value="Calibri">Calibri</option>
+                                <option value="Tahoma">Tahoma</option>
+                                <option value="Verdana">Verdana</option>
+                                <option value="Trebuchet MS">Trebuchet</option>
+                                <option value="monospace">1Space</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Font Size</label>
+                            <input type="number" id="fontSize" value="16" min="10" max="40" class="form-control">
+                        </div>
+
+                        <button id="postbtn" onclick="post()" type="button" class="btn btn-primary ms-auto">
+                            Post
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-8">
+                    <div id="posts" class="posts m-2"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
