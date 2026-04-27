@@ -228,3 +228,23 @@ if (loggedInUser) {
 } else {
   showAuth() 
 }
+var imageUploader = document.getElementById('imageUploader');
+var imagePreview = document.getElementById('imagePreview');
+imageUploader.addEventListener('change', function() {
+    var file = imageUploader.files[0];
+    console.log(file);
+    
+    if (file) {
+        var reader = new FileReader();
+        console.log(reader);
+        
+        reader.onload = function(e) {
+            imagePreview.src = e.target.result;
+            console.log(reader);
+             imagePreview.classList.remove('d-none');
+             selectedBg = e.target.result
+            
+        }
+        reader.readAsDataURL(file);
+    }
+});
