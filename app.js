@@ -139,23 +139,23 @@ renderPosts()
 // document.getElementById('welcomeUser').innerText = "Hi, " + loggedInUser + "!"
 
 function signup() {
-  let username = document.getElementById('signupUsername').value.trim()
+  let email = document.getElementById('signupEmail').value.trim()
   let password = document.getElementById('signupPassword').value.trim()
 
-  if (!username || !password) {
-    Swal.fire('Oops!', 'Please enter both username and password', 'warning')
+  if (!email || !password) {
+    Swal.fire('Oops!', 'Please enter both email and password', 'warning')
     return
   }
 
   let users = JSON.parse(localStorage.getItem('users')) || []
 
   for (let i = 0; i < users.length; i++) {
-    if (users[i].username === username) {
-      Swal.fire('Oops!', 'This username is already taken', 'error')
+    if (users[i].email === email) {
+      Swal.fire('Oops!', 'This email is already registered', 'error')
       return
     }
   }
-  users.push({ username: username, password: password })
+  users.push({ email: email, password: password })
   localStorage.setItem('users', JSON.stringify(users))
 
   Swal.fire('', 'Your account has been created!', 'success')
@@ -163,11 +163,11 @@ function signup() {
 }
 
 function login() {
-  let username = document.getElementById('loginUsername').value.trim()
+  let email = document.getElementById('loginEmail').value.trim()
   let password = document.getElementById('loginPassword').value.trim()
 
-  if (!username || !password) {
-    Swal.fire('Oops!', 'Please enter both username and password', 'warning')
+  if (!email || !password) {
+    Swal.fire('Oops!', 'Please enter both email and password', 'warning')
     return
   }
 
@@ -175,17 +175,17 @@ function login() {
 
   let foundUser = null
   for (let i = 0; i < users.length; i++) {
-    if (users[i].username === username && users[i].password === password) {
+    if (users[i].email === email && users[i].password === password) {
       foundUser = users[i]
       break
     }
   }
 
   if (foundUser) {
-    localStorage.setItem('loggedInUser', username)
+    localStorage.setItem('loggedInUser', foundUser.email)
     showApp() 
   } else {
-    Swal.fire('Error!', 'Username or password is incorrect', 'error')
+    Swal.fire('Error!', 'Email or password is incorrect', 'error')
   }
 }
 
